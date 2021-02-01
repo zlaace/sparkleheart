@@ -1,0 +1,15 @@
+{
+  "name": "uzdevums_2_zane_lace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "theme.js",
+  "scripts": {
+    "scss": "sass --watch ./resource/scss/style.scss:./assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "Zane Lace <zane.laace@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.5"
+  }
+}

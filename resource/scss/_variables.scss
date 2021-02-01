@@ -1,0 +1,31 @@
+$ff-oswald: "Oswald", sans-serif;
+$ff-montserrat: "Montserrat", sans-serif;
+
+$fw-reg: 400;
+$fw-med: 500;
+$fw-bold: 700;
+
+$clr-light: #fff;
+$clr-dark: #060606;
+$clr-green-dark: #2F4858;
+$clr-orange-light: #ffda16;
+$clr-orange-med: #ffa800;
+$clr-orange-dark: #ff8a00;
+
+$fs-h1: 48px;
+$fs-h2: 30px;
+$fs-h3: 24px;
+
+$transition: all 0.3s linear 0s;
+
+
+@media (max-width: 767px) {
+	:root {
+		$fs-h2: 24px;
+	}
+}
+
+@mixin background-img-pos {
+    background-repeat: no-repeat;
+    background-position: cover;
+}
