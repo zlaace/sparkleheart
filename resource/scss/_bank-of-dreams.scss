@@ -1,0 +1,296 @@
+.bank-of-dreams {
+	// .heading-container
+	.heading-container {
+		.page-heading { margin-bottom: 65px; }
+	}
+
+	@media (max-width: 600px) {
+		.heading-container {
+			.page-heading { margin-bottom: 30px; }
+		}
+
+		.paragraph-large {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	// questions
+	.questions-container {
+		padding-top: 149px;
+		padding-bottom: 151px;
+	}
+
+	@media (max-width: 600px) {
+		.questions-container {
+			padding-top: 120px;
+			padding-bottom: 160px;
+		}
+	}
+}
+
+// video section
+.dream-video-container {
+  display: flex;
+	height: 769px;
+	background-image: url(../img/dream-video.jpg);
+	@include background-pos;
+}
+
+@media (max-width: 1024px) {
+	.dream-video-container {	height: 432px;	}
+}
+
+@media (max-width: 480px) {
+	.dream-video-container { height: 180px; }
+}
+
+// goals section
+.goals-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	@include theme-padding;
+	padding-top: 151px;
+	padding-bottom: 151px;
+
+	h2 { margin-bottom: 90px; }
+
+	.goal {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 712px;
+		width: 100%;
+		margin: auto;
+
+		.sun-img,
+		.glasses-img { margin-right: 60px; }
+
+		.mountain-img { margin-left: 60px; }
+
+		.paragraph-small {
+			max-width: 500px;
+			width: 100%;
+		}
+	}
+
+	.first-goal { margin-bottom: 101px; }
+
+	.second-goal { margin-bottom: 112px; }
+}
+
+@media (min-width: 1100px) {
+	.goals-container {
+		.first-goal { margin-left: 25%; }
+	
+		.second-goal { margin-right: 34%; }
+	
+		.third-goal { margin-left: 25%; }
+	}
+}
+
+@media (min-width: 768px) {
+	.goals-container {
+		.second-goal {
+			flex-direction: row-reverse;
+			text-align: right;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.goals-container {
+		padding-top: 120px;
+		padding-bottom: 120px;
+
+		.goal {
+			flex-direction: column;
+			text-align: center;
+
+			.goal-img {
+				margin-bottom: 25px;
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.goals-container {
+		h2 { margin-bottom: 60px; }
+
+		.goal {
+			margin-bottom: 60px;
+
+			.goal-img {
+				width: 118px;
+				height: auto;
+			}
+		}
+		
+		.third-goal { margin-bottom: 0; }
+	}
+}
+
+.mission-container {
+	@include theme-padding;
+	padding-bottom: 151px;
+
+	h2 { margin-bottom: 52px; }
+}
+
+@media (max-width: 768px) {
+	.mission-container {
+		h2 { margin-bottom: 30px; }
+	}
+}
+
+@media (max-width: 600px) {
+	.mission-container { padding-bottom: 120px; }
+}
+
+// save dreams, dream criteria
+.save-dreams-container,
+.dream-criteria-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 533px;
+	padding-top: 60px;
+	padding-bottom: 90px;
+	color: $secondary-clr;
+	text-align: center;
+	@include theme-padding;
+	background: url(../img/orange-bg.png);
+	background: url(../img/orange-bg.svg);
+	@include background-pos;
+}
+
+@media (min-width: 1366px) {
+	.save-dreams-container,
+	.dream-criteria-container { background-size: 100% 533px; }
+}
+
+@media (max-width: 600px) {
+	.save-dreams-container,
+	.dream-criteria-container { height: 471px; }
+}
+
+.save-dreams-container {
+	.paragraph-large {
+		max-width: 818px;
+		margin: 0 auto;
+	}
+}
+
+.dream-criteria-container {
+	.paragraph-large {
+		max-width: 1030px;
+		margin: 0 auto;
+	}
+}
+
+.nature-img {
+	max-width: 367px;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+.rainbow-img {
+	@extend .nature-img;
+	max-width: 401px;
+}
+
+
+@media (max-width: 600px) {
+	.rainbow-img,
+	.nature-img { max-width: 279px; }
+}
+
+// voters
+.voters-container {
+	@include theme-padding;
+	padding-top: 150px;
+	padding-bottom: 160px;
+
+	h2 { margin-bottom: 60px; }
+
+	.voters {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 817px;
+		width: 100%;
+		margin: auto;
+		text-align: center;
+
+		.voter-group {
+			max-width: 288px;
+			width: 100%;
+
+			.speaker-img {
+				height: 150px;
+				margin-bottom: 30px;
+			}
+			
+			.partners-img-wrap {
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				height: 150px;
+				margin-bottom: 30px;
+
+				.partners-img { height: 120px; }
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.voters-container {
+		.paragraph-large {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		.voters {
+			.voter-group {
+				margin-right: auto;
+				margin-left: auto;
+
+				.speaker-img { height: 100px; }
+				
+				.partners-img-wrap {
+					height: 100px;
+	
+					.partners-img { height: 100%; }
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.voters-container {
+		padding-top: 120px;
+		padding-bottom: 120px;
+
+		.voters {
+			display: flex;
+			flex-direction: column;
+
+			.voter-group {
+				max-width: 100%;
+				margin: auto;
+			}
+
+			.voter-group:nth-child(1) { margin-bottom: 60px; }
+		}
+	}
+}

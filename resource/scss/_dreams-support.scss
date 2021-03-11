@@ -1,0 +1,338 @@
+.dreams-support {
+  .paragraph-small {
+    max-width: 818px;
+    width: 100%;
+    margin: auto;
+  }
+
+  // heading container
+  .heading-container {
+    padding-bottom: 94px;
+
+    .page-heading { margin-bottom: 64px; }
+  }
+
+  @media (max-width: 767px) {
+    .paragraph-small {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .heading-container { padding-bottom: 80px; }
+  }
+}
+
+// map
+.map-container { margin-bottom: -67px; }
+
+// dropdowns
+.companies-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 606px;
+  width: 100%;
+  margin: 0 auto 60px;
+
+  .company-location,
+  .company-type {
+    display: flex;
+    flex-direction: column;
+    max-width: 288px;
+    width: 100%;
+
+    .paragraph-small {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: $clr-orange;
+      font-weight: $fw-med;
+    }
+
+    .company-dropdown {
+      position: relative;
+      display: block;
+      min-height: 43px;
+      padding: 12px 15px 10px;
+      background-color: rgb(231,227,231);
+      border-radius: 6px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 11px;
+        height: 14px;
+        width: 18px;
+        background-image: url(../img/select-arrow.png);
+        background-image: url(../img/select-arrow.svg);
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .current-type,
+      .current-location,
+      .location-item,
+      .type-item {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        line-height: 22px;
+        color: $primary-clr;
+        letter-spacing: -0.015em;
+        cursor: pointer;
+      }
+
+      .location-options,
+      .type-options {
+        position: relative;
+        display: block;
+        height: 0;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2px;
+          height: .5px;
+          max-width: 219px;
+          width: 100%;
+          background-color: $primary-clr;
+          transition: $transition;
+        }
+
+        .location-item,
+        .type-item { margin-top: 10px; }
+      }
+
+      .location-options,
+      .type-options {
+        &.show {
+          height: auto;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .companies-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 80px;
+    @include theme-padding;
+
+    .company-location { margin-bottom: 40px; }
+
+    .company-location,
+    .company-type {
+      max-width: 100%;
+      width: 100%;
+
+      .company-dropdown {
+        .current-type,
+        .current-location,
+        .location-item,
+        .type-item {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}
+
+// marker info common style
+.marker-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    .marker-logo {
+      width: 120px;
+      height: 100%;
+    }
+
+    .marker-content {
+      display: flex;
+      margin-left: 30px;
+      text-transform: none !important;
+
+      .marker-name { text-transform: none; }
+
+    .marker-contact-info { text-align: right; }
+  }
+}
+
+// selected company info style
+.selected-companies {
+  @include theme-padding;
+
+  .marker-container {
+    max-width: 823px;
+    width: 100%;
+    margin-bottom: 33px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:last-child { margin-bottom: 60px; }
+
+    .marker-content {
+      justify-content: space-between;
+      align-items: center;
+      max-width: 606px;
+      width: 100%;
+      margin-bottom: 0;
+
+      .marker-name {
+        margin-bottom: 0;
+        font-family: $ff-montserrat;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .marker-contact-info { margin-left: 30px; }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .selected-companies {
+    .marker-container {
+      .marker-logo { width: 98px; }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .selected-companies { display: none; }
+}
+
+// custom Google map style
+#map {
+  height: 680px;
+  background: rgba(196,186,196,.4);
+  width: 100%;
+
+  .gm-style {
+    .gm-style-mtc,
+    .gm-svpc { display: none !important; }
+
+    .gm-bundled-control {
+      .gmnoprint {
+        top: -82px !important;
+        left: -69px !important;
+
+        div[draggable="false"]{
+          width: auto !important;
+          background-color: transparent !important;
+          box-shadow: none !important;
+
+          .gm-control-active {
+            width: 56.82px !important;
+            height: 57.14px !important;
+            background: rgba(255, 168, 0, 0.5) !important;
+            border-radius: 14px;
+          }
+
+          .gm-control-active[aria-label="Zoom in"] { margin-bottom: 20px !important; }
+
+          div { display: none; }
+        }
+      }
+    }
+  }
+
+  .gm-style-iw-c {
+    padding: 0 !important;
+    background: transparent !important;
+
+    .gm-style-iw-d {
+      max-height: auto;
+      padding: 0 !important;
+      overflow: hidden !important;
+    }
+  }
+
+  .gm-style-iw-t {
+    &::after { display: none; }
+  }
+
+  // selected marker infowindow style
+  .marker-container {
+    background: rgba(255, 168, 0, 0.5) !important;
+    padding: 22px 27px 25px 30px !important;
+
+    .marker-content {
+      flex-direction: column;
+
+      .marker-name {
+        margin-bottom: 30px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #map {
+    .gm-style {
+      .gm-bundled-control {
+        .gmnoprint {
+          top: -90px !important;
+          left: -35px !important;
+        }
+      }
+    }
+  
+    .marker-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  #map {
+    height: 680px;
+
+    .gm-style-iw-c { max-width: 300px !important; }
+  
+    .gm-style {
+      .gm-bundled-control {
+        .gmnoprint {
+          left: -23px !important;
+  
+          div[draggable="false"]{
+            .gm-control-active { transform: scale(.8); }
+  
+            .gm-control-active[aria-label="Zoom in"] { margin-bottom: 0 !important; }
+          }
+        }
+      }
+    }
+
+    .marker-container {
+      flex-direction: column;
+
+      .marker-logo-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 15px;
+
+        .marker-logo { text-align: right; }
+      }
+
+      .marker-content {
+        .marker-name {
+          font-size: 18px;
+          line-height: 27px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

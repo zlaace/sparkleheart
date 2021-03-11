@@ -1,0 +1,173 @@
+// page introduction
+.idea-container {
+  @include theme-padding;
+  padding-bottom: 151px;
+
+  .paragraph-small { max-width: 606px; }
+}
+
+@media (max-width: 600px) {
+  .idea-container { padding-bottom: 80px; }
+}
+
+// about Juris
+.sparkle-purpose {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 705px;
+	background-image: url(../img/juris.jpg);
+  @include background-pos;
+  text-align: center;
+  
+	&::before {
+    top: -1px;
+		height: 55px;
+		background: url(../img/ripped-line.png);
+    background: url(../img/ripped-line.svg);
+    transform: rotate(-180deg);
+		@include ripped-lines;
+	}
+
+	&::after {
+		bottom: -1px;
+    height: 55px;
+		background: url(../img/ripped-line.png);
+		background: url(../img/ripped-line.svg);
+		@include ripped-lines;
+	}
+  
+  .purpose-paragraph {
+    max-width: 818px;
+    width: 100%;
+    margin: 0 auto 89px;
+    color: $secondary-clr;
+    font-size: $fs-h3;
+    font-family: $ff-oswald;
+    font-weight: $fw-med;
+    line-height: 36px;
+    text-transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sparkle-purpose {
+    height: 499px;
+
+    &::before { top: -1px; }
+  
+    &::after { bottom: -2px; }
+
+    .purpose-paragraph { @include theme-padding; }
+  }
+}
+
+@media (max-width: 600px) {
+  .sparkle-purpose {
+    height: 476px;
+    background-position: 70%;
+
+    .purpose-paragraph {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 65px;
+    }
+  }
+}
+
+// reviews section
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  @include theme-padding;
+  padding-top: 146px;
+  padding-bottom: 175px;
+
+  .review-card {
+    max-width: 602px;
+    width: 100%;
+
+    .author {
+      margin-bottom: 10px;
+      line-height: 36px;
+      text-transform: capitalize;
+      text-align: left;
+    }
+
+    .job {
+      margin-bottom: 33px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .review {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 29px;
+      font-style: italic;
+    }
+
+    .button-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 74px;
+
+      .prev-btn,
+      .next-btn {
+        position: relative;
+        padding: 0;
+        background: none;
+        outline: none;
+        border: none;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 25px;
+          background-image: url(../img/review-btn.png);
+          background-image: url(../img/review-btn.svg);
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
+      }
+
+      .prev-btn {
+        &::before {
+          left: 0;
+          transform: rotate(-180deg);
+        }
+      }
+
+      .next-btn {
+        &::after { right: 0px; }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-container {
+    padding-top: 120px;
+    padding-bottom: 180px;
+
+    .review-card {
+      .author {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      .job {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      .review {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  }
+}

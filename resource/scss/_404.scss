@@ -1,0 +1,50 @@
+.container-404 {
+  padding-top: 280px;
+  padding-bottom: 215px;
+  @include theme-padding;
+  background-color: #ffcb66;
+  text-align: center;
+  
+  h1,
+  h3 {
+    font-family: $ff-oswald;
+    font-weight: 700;
+  }
+
+  .heading-404 {
+    margin-bottom: 40px;
+    color: $secondary-clr;
+    font-size: 96px;
+    line-height: 142px;
+  }
+
+  .heading-not-found {
+    margin-bottom: 30px;
+    text-transform: none;
+  }
+  
+  .paragraph-small { margin-bottom: 50px; }
+
+  .sparkle-btn {
+    color: #ffcb66;
+    text-decoration: none;
+    background-color: $secondary-clr;
+
+    &:hover { background-color: $clr-orange-dark; }
+  }
+}
+
+@media (max-width: 600px) {
+  .container-404 {
+    padding-top: 140px;
+    padding-bottom: 170px;
+
+    .heading-404 {
+      margin-bottom: 20px;
+      font-size: 50px;
+      line-height: 90px;
+    }
+  
+    .heading-not-found { margin-bottom: 15px; }
+  }
+}

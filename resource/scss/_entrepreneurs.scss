@@ -1,0 +1,38 @@
+.entrepreneurs {
+  // heading container
+  .heading-container {
+    margin: auto;
+    @include theme-padding;
+    padding-bottom: 156px;
+
+    .paragraph-small {
+      max-width: 810px;
+      margin: auto;
+    }
+  }
+
+  // form
+  .form-container {
+    padding-bottom: 155px;
+
+    .form {
+      .form-heading { margin-bottom: 63px; }
+
+      .form-textarea { margin-bottom: 27px; }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .heading-container { padding-bottom: 120px; }
+
+    .form-container {
+      padding-bottom: 160px;
+  
+      .form {
+        .form-heading { margin-bottom: 30px; }
+  
+        .form-textarea { margin-bottom: 10px; }
+      }
+    }
+  }
+}

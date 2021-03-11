@@ -1,0 +1,113 @@
+// Submit A Dream stylesheet
+.submit-dream {
+  // heading container
+  .heading-container {
+    @include theme-padding;
+    padding-bottom: 92px;
+  }
+
+  @media (max-width: 600px) {
+    .heading-container { padding-bottom: 80px; }
+  }
+
+  // personal dream and professional dream
+  .dreams-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1030px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 156px;
+    text-align: center;
+
+    .personal-dream,
+    .profesional-dream {
+      display: flex;
+      flex-direction: column;
+      max-width: 394px;
+      width: 100%;
+
+      .dream-img {
+        margin: 0 auto 55px;
+        height: 198px;
+        width: auto;
+      }
+
+      .dream-heading { margin-bottom: 20px; }
+
+      .paragraph-small { margin-bottom: 55px; }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .dreams-container {
+      @include theme-padding;
+      flex-wrap: wrap;
+
+      .personal-dream { margin-bottom: 150px; }
+
+      .personal-dream,
+      .profesional-dream {
+        max-width: 100%;
+
+        .dream-img { margin-bottom: 30px; }
+
+        .dream-heading { margin-bottom: 10px; }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .dreams-container {
+      padding-bottom: 120px;
+
+      .personal-dream { margin-bottom: 80px; }
+
+      .personal-dream,
+      .profesional-dream {
+
+        .dream-img { height: 190px; }
+      }
+    }
+  }
+
+  // image section
+  .gallery-container {
+    &::before { top: -6px; }
+
+    &::after { bottom: -19px; }
+
+    .images-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .gallery-container {
+      .images-wrap { align-items: normal; }
+
+      &::after { bottom: -1px; }
+    }
+  }
+
+  // form
+  .form-container {
+    padding-top: 170px;
+    padding-bottom: 155px;
+
+    .form-heading { margin-bottom: 51px; }
+
+    .form-wrap { margin-bottom: 70px; }
+  }
+
+  @media (max-width: 600px) {
+    .form-container {
+      padding-top: 120px;
+      padding-bottom: 160px;
+
+      .form-heading { margin-bottom: 30px; }
+    }
+  }
+}

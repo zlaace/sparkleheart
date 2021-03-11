@@ -1,0 +1,50 @@
+@mixin theme-padding {
+  padding-right: 80px;
+  padding-left: 80px;
+
+  @media (max-width: 767px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@mixin btn-colors {
+  font-weight: $fw-med;
+  color: $secondary-clr;
+  background-color: $clr-orange;
+  border: none;
+  border-radius: 30px;
+  transition: $transition;
+
+  &:hover { background-color: $clr-orange-light; }
+
+  &:active { background-color: $clr-orange-dark; }
+}
+
+@mixin background-pos {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin ripped-lines {
+  content: "";
+  position: absolute;
+  display: block;
+  @include background-pos;
+}
+
+@mixin input-common {
+  align-items: center;
+  display: flex;
+  margin-bottom: 16px;
+  padding: 12px 14px 8px 12px;
+  font-family: $ff-montserrat;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.015em;
+  background: rgba(196,196,196,0.4);
+  border-radius: 6px;
+  border: none;
+}
