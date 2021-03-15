@@ -177,7 +177,10 @@ p {
 	color: $secondary-clr;
 	@include btn-colors;
 
-	&:hover { text-decoration: none; }
+	&:hover { 
+		text-decoration: none;
+		color: $secondary-clr;
+	 }
 }
 
 .site-header,
@@ -242,7 +245,7 @@ p {
 
 // about SparkleHeart
 .about-container {
-	// @include theme-padding;
+	@include theme-padding;
 	padding-top: 150px;
 	padding-bottom: 155px;
 
@@ -399,7 +402,7 @@ p {
 	padding-bottom: 150px;
 
 	.form-heading {
-		margin-bottom: 59px;
+		margin-bottom: 57px;
 		text-align: center;
 		line-height: 44px;
 		text-transform: uppercase;
@@ -578,12 +581,13 @@ p {
 
 // support section
 .supporters-container {
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin-bottom: -68px;
 	@include theme-padding;
-	padding-top: 105px;
+	padding-top: 104px;
 	padding-bottom: 200px;
 	background-image: url(../img/orange-bg.png);
 	background-image: url(../img/orange-bg.svg);
@@ -652,9 +656,9 @@ p {
 
 // scroll to top button
 .scroll-btn {
-	position: fixed;
+	// position: fixed;
 	right: 65px;
-	bottom: 30px;
+	// bottom: 30px;
 	z-index: 2;
 	display: none;
 	width: 50px;

@@ -49,7 +49,7 @@ langOptions.addEventListener('click', function (e) {
 
 var scrollBtn = document.querySelector('.js-scroll-btn');
 var footer = document.querySelector('.site-footer');
-var footerHeight = footer.getBoundingClientRect().height;
+var footerHeight = footer.getBoundingClientRect().height; // const footerHeight = footer.offsetHeight + "px";
 
 window.onscroll = function () {
   document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? scrollBtn.style.display = 'block' : scrollBtn.style.display = 'none';
@@ -58,7 +58,8 @@ window.onscroll = function () {
 
 scrollBtn.addEventListener('click', function () {
   document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  document.documentElement.scrollTop = 0; // let footera = footer.offsetHeight;
+  // console.log(footera);
 });
 
 function stopBeforeFooter() {

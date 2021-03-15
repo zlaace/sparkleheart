@@ -55,6 +55,7 @@ langOptions.addEventListener('click', e => {
 const scrollBtn = document.querySelector('.js-scroll-btn');
 const footer = document.querySelector('.site-footer');
 const footerHeight = footer.getBoundingClientRect().height;
+// const footerHeight = footer.offsetHeight + "px";
 
 window.onscroll = () => {
   document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? scrollBtn.style.display = 'block' : scrollBtn.style.display = 'none';
@@ -64,6 +65,8 @@ window.onscroll = () => {
 scrollBtn.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+    // let footera = footer.offsetHeight;
+    // console.log(footera);
 });
 
 function stopBeforeFooter() {

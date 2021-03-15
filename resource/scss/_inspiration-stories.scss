@@ -61,6 +61,7 @@
         font-family: $ff-oswald;
         font-size: 36px;
         line-height: 53px;
+        pointer-events: none;
       }
 
       .overlay {
@@ -91,6 +92,7 @@
         transform: translate(-50%, -50%);
         text-align: center;
         text-transform: none;
+        pointer-events: none;
       }
 
       h3 {
